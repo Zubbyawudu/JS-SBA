@@ -191,11 +191,209 @@ for(let i = 12; i < 4000; i+=3)
 
 //--------------- SOLUTION ---------------------- //
 // to calculate the sum of numbers
-
-let sum = 0;
+let bank_account = 0;
 for(let i = 1; i <=10; i++ ){
   bank_account += i;
 }
+
+// console.log(bank_account);
+
+// bonus pay and total sum in account 
+let totalSum = 0;
+for(let i = 1; i <=100; i++ ){
+  totalSum += i
+}
+
+bank_account = totalSum * 2
+// console.log(bank_account);
+
+  
+
+
+//III. Arrays & Control flow
+
+//A. Talk about it:
+
+//What are the things in an array called?
+//Answer -- Arrays carry collection of elements stores them in index and values . 
+
+//Do Arrays guarantee those things will be in order?
+// Answer ---   Yes arrays keep the things in order by giving each index positions that start at zero . This makes it each to keep sequence and also makes iteration easy . 
+
+
+//What real-life thing could you model with an array?
+// Answer --- Looking at an auto mechanic shop , all the tools and equipment stored in the shop can be classified in an array .. 
+//      Example  let autoMechanicShop = ["vehicle lift","wrench ","screwdriver bag", " jack "...]
+
+
+//B. Easy Does It
+
+//Create an array that contains three quotes and store it in a variable called quotes
+
+// Answer ----- let quotes = [ "Opportunities don't happen, you create them","The only approval you need is your own","You must do the things you think you cannot do"]
+
+
+//C. Accessing elements
+
+//Given the following array const randomThings = [1, 10, "Hello", true]
+const randomThings = [1, 10, "Hello", true]
+
+//How do you access the 1st element in the array?
+let randomThing =  randomThings.at(0) // using the at() method 
+
+
+//Change the value of "Hello" to "World"
+randomThings[2] = "World"// Used the direct reassigning method
+
+//Check the value of the array to make sure it updated the array. How? Why, yes! console.log(randomThings);
+
+
+
+//D. Change values
+
+//Given the following array const ourClass = ["Salty", "Zoom", "Sardine", "Slack", "Github"]
+const ourClass = ["Salty", "Zoom", "Sardine", "Slack", "Github"]
+
+//What would you write to access the 3rd element of the array?
+let ourKlass = ourClass.at(2) //using the at() method 
+
+//Change the value of "Github" to "Octocat"
+ourClass[4] = "Octocat" // Used the direct reassigning method
+
+//Add a new element, "Cloud City" to the array
+ourClass.push("Cloud City")// Used the .push() because it adds a new value to the array . 
+console.log(ourClass);
+
+
+//E. Mix It Up
+
+//Note: You don't really need .splice() for these. You could use it, but there are simpler array methods that are more appropriate.
+//Given the following array: const myArray = [5, 10, 500, 20]
+const myArray = [5, 10, 500, 20]
+//Add the string "Aegon" to the end of the array. Add another string of your choice to the end of the array.
+myArray.push("Aegon","Banks")
+
+//Remove the 5 from the beginning of the array.
+myArray.shift(0)
+
+//Add the string "Bob Marley" to the beginning of the array.
+myArray.unshift("Bob Marley")
+console.log(myArray);
+//Remove the string of your choice from the end of the array.
+myArray.pop(5)
+
+//Reverse this array using Array.prototype.reverse(). Did you mutate the array? What does mutate mean? Did the .reverse() method return anything?
+let revarr = myArray.reverse() // mutating the array , to mutate simply means to change the concept/ assignment of the value in the array . 
+console.log(revarr); // the reverse method return the same elements/values in the array but re-arranges them in a form it flips the array and outputs the result in a reverse approach. 
+
+
+//F. Biggie Smalls
+
+//Create a variable that contains an integer.
+//Write an if ... else statement that:
+//1.console.log()s "little number" if the number is entered is less than 100
+//console.log()s big number if the number is greater than or equal to 100.
+
+//------------------- SOLUTION -------------------//
+let s = 200
+let num = 100
+if ( s < 100) {
+  console.log("little number");
+} else {
+  console.log("big number");
+  
+}
+
+//G. Monkey in the Middle
+
+//Write an if ... else if ... else statement:
+//console.log() little number if the number entered is less than 5.
+//If the number entered is more than 10, log big number.
+//Otherwise, log "monkey".
+
+//------------------- SOLUTION -------------------//
+
+let x = 4
+if (x < 5) {
+  console.log("little number");
+  
+} else if( x > 10) {
+  console.log("big number");
+  
+}else{
+  console.log("monkey");
+}
+
+
+
+//H. What's in Your Closet?
+
+//Below, we've given you examples of Kristyn and Thom's closets modeled as data in JavaScript.
+
+const kristynsCloset = [
+  "left shoe",
+  "cowboy boots",
+  "right sock",
+  "Per Scholas hoodie",
+  "green pants",
+  "yellow knit hat",
+  "marshmallow peeps"
+];
+
+// Thom's closet is more complicated. Check out this nested data structure!!
+const thomsCloset = [
+  [
+    // These are Thom's shirts
+    "grey button-up",
+    "dark grey button-up",
+    "light blue button-up",
+    "blue button-up",
+  ],[
+    // These are Thom's pants
+    "grey jeans",
+    "jeans",
+    "PJs"
+  ],[
+    // Thom's accessories
+    "wool mittens",
+    "wool scarf",
+    "raybans"
+  ]
+];
+
+//1. What's Kristyn wearing today? Using bracket notation to access items in kristynsCloset, log the sentence "Kristyn is rocking that " + the third item in Kristyn's closet + " today!" to the console.
+
+console.log("Kristyn is rocking that " +  kristynsCloset[2] + " today!");
+
+// 2. Kristyn just bought some sweet shades! Add "raybans" to her closet after "yellow knit hat".
+kristynsCloset.splice(6 , 0 , "raybans")
+console.log(kristynsCloset);
+
+// 3. Kristyn spilled coffee on her hat... modify this item to read "stained knit hat" instead of yellow.
+kristynsCloset[5] = "stained knit hat"
+console.log(kristynsCloset);
+
+
+// 4.Put together an outfit for Thom! Using bracket notation, access the first element in Thom's shirts array.
+thomsCloset[0][0];
+
+
+// 5. In the same way, access one item from Thom's pants array.
+thomsCloset[1][2];
+console.log(thomsCloset[1][2]);
+
+// 6.Access one item from Thom's accessories array.
+thomsCloset[2][1];
+console.log(thomsCloset[2][1]);
+
+// 7.Log a sentence about what Thom's wearing. Example: "Thom is looking fierce in a grey button-up, jeans and wool scarf!"
+console.log("Thom is looking awesome in a " + thomsCloset[0][0]+"," 
++ thomsCloset[1][2] + " and " + thomsCloset[2][1] );
+
+// 8. Get more specific about what kind of PJs Thom's wearing this winter. Modify the name of his PJ pants to Footie Pajamas.
+thomsCloset[1][2] = "Footie Pajamas."
+console.log(thomsCloset[1]);
+
 
 
 
