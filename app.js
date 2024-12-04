@@ -58,7 +58,9 @@ secondVariable = "Hello Planet" // reassigning secondVariable to a second string
 firstVariable = 20 // firstVariable still remains 20 because the value never changed .
 // concatenating strings . 
 let yourName = "Zubairu Awudu"
-console.log(`Hello my name is ${yourName}`);
+let greeting = "Hello, my name is "
+let message = greeting.concat(yourName)
+console.log(message);
 
 
 
@@ -104,3 +106,61 @@ if (goat === animal) {
   
 }
  
+
+
+//E. Driver's Ed
+
+//Make a variable that holds a person's age; be semantic
+let zubsAge = 26
+//Write code that will print out "Here are the keys!", if the age is 16 years or older, or, if the age is younger than 16, a message should print "Sorry, you're too young."
+let minimumAge = 16
+if (zubsAge >= minimumAge) {
+  console.log("Here are the keys!");
+} else {
+  console.log("Sorry, you're too young.");
+  
+}
+
+
+
+
+//II. Loops
+
+//Remember: USE let when you initialize your for loops!
+
+//This is GOOD: for(let i = 0; i < 100; i++)
+
+//This is NO GOOD: for(i = 0; i < 100; i++)
+
+
+//A. The basics
+
+//Write a loop that will print out all the numbers from 0 to 10, inclusive
+for(let i = 0; i < 10; i++)
+  
+
+//Write a loop that will print out all the numbers from 10 up to and including 400
+for(let i = 10; i < 401; i++)
+  
+//Write a loop that will print out every third number starting with 12 and going no higher than 4000
+
+for(let i = 12; i < 4000; i+=3)
+
+//B. Get even
+
+//1. Print out the numbers that are within the range of 1 - 100
+//2. Adjust your code to add a message next to even numbers only that says: "<-- is an even number" 
+//-------------SOLUTION ----------- //
+for (let i = 1; i <= 100; i++){
+  if (i % 2 === 0){
+    console.log(i + " <-- is an even number");
+  }
+}
+
+
+// 
+
+
+
+
+
