@@ -190,8 +190,9 @@ for(let i = 12; i < 4000; i+=3)
 //Check your work! Your bank_account should have $10,100 in it.
 
 //--------------- SOLUTION ---------------------- //
-// to calculate the sum of numbers
-let bank_account = 0;
+
+
+var bank_account = 0;
 for(let i = 1; i <=10; i++ ){
   bank_account += i;
 }
@@ -313,11 +314,11 @@ if ( s < 100) {
 
 //------------------- SOLUTION -------------------//
 
-let x = 4
-if (x < 5) {
+let x1 = 4
+if (x1 < 5) {
   console.log("little number");
   
-} else if( x > 10) {
+} else if( x1 > 10) {
   console.log("big number");
   
 }else{
@@ -618,9 +619,9 @@ let cat2 ={
 
 function combineCats( mama,papa) {
   let kitten = {
-    name: cat1.name + cat2.name,
+    name: mama.name + papa.name,
     age : 1 ,
-    breed: cat1.breed + " - " + cat2.breed
+    breed: mama.breed + " - " + papa.breed
   }
   return kitten
 
@@ -639,6 +640,13 @@ console.log(combineCats(cat1,cat2));
 // Write a console.log that is three levels deep of combineCats. combineCats should have two arguments, each which are combineCats, each which have two arguments, each which are combineCats.
 
 //-----------------------Solution------------------//
+
+console.log(combineCats(
+  combineCats(combineCats(cat1, cat2), combineCats(cat1, cat2)),
+  combineCats(combineCats(cat1, cat2), combineCats(cat1, cat2))
+));
+
+
 
 
 
